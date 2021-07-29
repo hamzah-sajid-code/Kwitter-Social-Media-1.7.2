@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Kwitter Message page</title>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<audio src="ting.mp3" id="ting12"></audio>
+	<div class="container">
+		<button onclick="back()">Back</button>
+		<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="logout()">Logout</button>
+		<center>
+
+			<h1 class="header">
+				Kwitter
+				<sup>
+					<img src="m2.png">
+				</sup>
+			</h1>
+		<span>
+		<h3 class="color_white" id="user_names">Welcome <span id="roomname"></span></h3>
+			<div style="text-align: left;margin-bottom: 70px;margin-left: 30px;" id="output">
+				<div id="imgOutput"></div>
+			</div>
+			</span>
+		
+		</center>
+	</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<center>
+		<div class="input_div_message_page">
+			<input type="text" id="msg" class="form-control" placeholder="Message">
+			
+			<label>Send:</label>
+			<button class="btn btn-success" onclick="send()">Send</button>
+			<br>
+			<br>
+			<label for="aaa">
+				<h4 class="btn btn-info">Send Audios, Images and Videos</h4>
+			</label>
+			<input type="file" id="aaa" onchange="encodeImageFileAsURL(this)" class="form-control" style="display:none;"/>
+			<label for="myFile">
+				<h4 class="btn btn-success">Send Document</h4>
+			</label>
+			<input type="file" onchange="getFile()" class="form-control" id="myFile" style="display: none;"/>
+		</div>
+	</center>
+
+	<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js"></script>
+	<script>
+		var firebaseConfig = {
+    apiKey: "AIzaSyBI6flBIkYo7XKPRQ8YUPRo9bnwaIHlgBU",
+    authDomain: "kwitter-database-96237.firebaseapp.com",
+    projectId: "kwitter-database-96237",
+    storageBucket: "kwitter-database-96237.appspot.com",
+    messagingSenderId: "463751337208",
+    appId: "1:463751337208:web:8211bd0d0f4a538e00970d",
+    measurementId: "G-X0HMSZ3BL6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+	  </script>
+	<script src="chat_code.js"></script>
+
+</body>
+
+</html>
