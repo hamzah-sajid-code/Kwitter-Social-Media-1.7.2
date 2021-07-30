@@ -49,7 +49,7 @@ function getData() {
                   slug = message_data['fileUrl'].split('.').pop();
                   console.log(slug)
                   str2 = slug.charAt(0).toUpperCase() + slug.slice(1);
-                  document.getElementById('output').innerHTML += "<h4> " + name + "<img class='user_tick' src='tick.png'></h4>"+"<h4>Download Button of your"+str2+" file:<a href="+mainUrl+"><button class='btn btn-info'><img src='download.svg'></img> Download</button></h4></a><button class='btn btn-danger' id=" + firebase_message_id + " onclick='deletet(this.id)'>Delete</button><hr><br><br>";
+                  document.getElementById('output').innerHTML += "<h4> " + name + "<img class='user_tick' src='tick.png'></h4>"+"<h4>Download Button of your ."+str2+" file:<a href="+mainUrl+"><button class='btn btn-info'><img src='download.svg'></img> Download</button></h4></a><button class='btn btn-danger' id=" + firebase_message_id + " onclick='deletet(this.id)'>Delete</button><hr><br><br>";
                   
                 }
                 
